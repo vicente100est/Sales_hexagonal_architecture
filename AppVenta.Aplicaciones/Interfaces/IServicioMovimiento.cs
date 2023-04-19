@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AppVenta.Aplicaciones.Interfaces
 {
-    public interface IServicioBase<TEntidad, TEntidadID>
-        : IAgregar<TEntidad>, IEditar<TEntidad>, IEliminar<TEntidadID>, IListar<TEntidad, TEntidadID>
+    public interface IServicioMovimiento<TEntidad, TEntidadID>
+        : IAgregar<TEntidad>, IListar<TEntidad, TEntidadID>
     {
+        void Anular(TEntidadID entidadId);
     }
 }
