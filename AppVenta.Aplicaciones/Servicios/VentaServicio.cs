@@ -39,24 +39,23 @@ namespace AppVenta.Aplicaciones.Servicios
                 if (productoSeleccionado == null)
                     throw new NullReferenceException("Usted esta intentando vender un producto que no existe >:v >:v >:v");
 
-                var detalleNuevo = new VentaDetalle();
-                detalleNuevo.ventaId = ventaAgregada.ventaId;
-                detalleNuevo.productoId = detalle.productoId;
-                detalleNuevo.costoUnitario = productoSeleccionado.costo;
-                detalleNuevo.precioUnitario = productoSeleccionado.precio;
-                detalleNuevo.cantidadVendida = detalle.cantidadVendida;
-                detalleNuevo.subtotal = detalle.precioUnitario * detalle.cantidadVendida;
-                detalleNuevo.impuesto = detalleNuevo.subtotal * 12 / 100;
-                detalleNuevo.total = detalleNuevo.subtotal + detalleNuevo.impuesto;
+                detalle.ventaId = ventaAgregada.ventaId;
+                detalle.productoId = detalle.productoId;
+                detalle.costoUnitario = productoSeleccionado.costo;
+                detalle.precioUnitario = productoSeleccionado.precio;
+                detalle.cantidadVendida = detalle.cantidadVendida;
+                detalle.subtotal = detalle.precioUnitario * detalle.cantidadVendida;
+                detalle.impuesto = detalle.subtotal * 12 / 100;
+                detalle.total = detalle.subtotal + detalle.impuesto;
 
-                _repoDetalle.Agregar(detalleNuevo);
+                _repoDetalle.Agregar(detalle);
 
-                productoSeleccionado.cantidadEnStock -= detalleNuevo.cantidadVendida;
+                productoSeleccionado.cantidadEnStock -= detalle.cantidadVendida;
                 _repoProducto.Editar(productoSeleccionado);
 
-                entidad.subtotal += detalleNuevo.subtotal;
-                entidad.impuesto += detalleNuevo.impuesto;
-                entidad.total += detalleNuevo.total;
+                entidad.subtotal += detalle.subtotal;
+                entidad.impuesto += detalle.impuesto;
+                entidad.total += detalle.total;
             });
 
             _repoVenta.GuardarTodosLosCambios();
