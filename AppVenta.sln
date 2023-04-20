@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppVenta.Aplicaciones", "Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVenta.Infraestructura.Datos", "AppVenta.Infraestructura.Datos\AppVenta.Infraestructura.Datos.csproj", "{D3549461-E581-43FD-8447-DF4A0F2AC2F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVenta.Infraestructura.API", "AppVenta.Infraestructura.API\AppVenta.Infraestructura.API.csproj", "{4E76E366-13DE-44BD-A72F-51D13549BBFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D3549461-E581-43FD-8447-DF4A0F2AC2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3549461-E581-43FD-8447-DF4A0F2AC2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3549461-E581-43FD-8447-DF4A0F2AC2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E76E366-13DE-44BD-A72F-51D13549BBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E76E366-13DE-44BD-A72F-51D13549BBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E76E366-13DE-44BD-A72F-51D13549BBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E76E366-13DE-44BD-A72F-51D13549BBFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

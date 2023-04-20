@@ -17,8 +17,7 @@ namespace AppVenta.Infraestructura.Datos.Contextos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-                @"Data Source=(localdb)\MSSQLLocalDB; Initial Catalogo = VentasDb; Integrated Security = true");
+            optionsBuilder.UseSqlServer("server=localhost;database=myDb;trusted_connection=true;Encrypt=False;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
